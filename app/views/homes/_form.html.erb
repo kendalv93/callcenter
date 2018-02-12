@@ -1,0 +1,44 @@
+<div id = "background_color">
+<div id = "categories">
+<%= form_for @home do |f| %>
+
+    <b>Category</b><br>
+    <%= f.radio_button :category, 'Place Order' %> Place Order </br>
+    <%= f.radio_button :category, 'Order Status' %> Order Status </br>
+    <%= f.radio_button :category, 'Catalog Questions' %> Catalog Quesitons </br>
+    <%= f.radio_button :category, 'Internet Orders' %> Internet Orders </br>
+    <%= f.radio_button :category, 'Mail Order' %> Mail Order </br>
+    <%= f.radio_button :category, 'Remove from Mailing List' %> Remove from Mailing List </br>
+    <%= f.radio_button :category, 'Returns' %> Returns </br>
+    <%= f.radio_button :category, 'Rebates' %> Rebates </br>
+    <%= f.radio_button :category, 'Club Membership' %> Club Membership </br>
+    <%= f.radio_button :category, 'Recon' %> Recon </br>
+    <%= f.radio_button :category, 'Supervisor' %> Supervisor </br>
+    <%= f.radio_button :category, 'Other Questions' %> Other Questions </br>
+      </div>
+
+<div id = item_sku">
+    <p>
+      Item SKU #
+      <%= f.text_field :sku, :maxlength=> 10 %>
+    </p>
+</div>
+
+<div id = "Comments">
+    <p>
+      <%= f.label :comments %><br>
+      <%= f.text_area :comments, :maxlength=>'500', :cols => 80, :rows => 8 %>
+    </p>
+</div>
+
+      <div id = "submit_clear_button">
+    <p>
+      <%= f.submit :Submit%>
+    </p>
+
+      <p>
+        <%= button_tag "Clear", type: :reset %>
+      </p>
+      </div>
+<% end %>
+</div>

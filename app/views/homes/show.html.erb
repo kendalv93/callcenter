@@ -1,0 +1,18 @@
+
+<table>
+  <tr>
+    <th>Categories</th>
+    <th>Sku</th>
+    <th>Comments</th>
+    <th colspan="7"></th>
+  </tr>
+
+  <% @home.each do |f| %>
+      <tr>
+        <td><div id = "disdatacategory"><%= f.category %></div></td>
+        <td><div id = "disdatasku"><%= f.sku %></div></td>
+        <td><div id = "disdatacomments"><%= f.comments%></div></td>
+      </tr>
+  <% end %>
+
+</table>
